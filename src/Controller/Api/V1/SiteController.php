@@ -38,6 +38,7 @@ class SiteController extends Controller
      *     path="/api/v1/version",
      *     operationId="viewVersion",
      *     summary="View current application version",
+     *     tags={"Version"},
      *     @OA\Parameter(
      *         name="app_token",
      *         in="query",
