@@ -7,7 +7,7 @@ namespace Rb\UserStory\ExternalApplication\CreateTask;
 use Ramsey\Uuid\Uuid;
 use Rb\Domain\Task\Save\Persistent;
 use Rb\Domain\Task\Save\SaveTask;
-use Rb\Domain\Task\Save\WithCash;
+use Rb\Domain\Task\Save\WithCache;
 use Rb\Domain\Task\Status\TaskNew;
 use Rb\Generic\Response;
 use Rb\Generic\Response\BadRequest;
@@ -38,7 +38,7 @@ class CreateTask implements UserStory
         $validationValue = $validationResult->value();
 
         $createTaskResult =
-            (new WithCash(
+            (new WithCache(
                 new SaveTask(
                     new Persistent(
                         new Task([

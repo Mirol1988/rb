@@ -10,7 +10,7 @@ use Rb\Generic\Result\Successful;
 use Rb\Models\Task as TaskModel;
 use Yii;
 
-class WithCash implements Task
+class WithCache implements Task
 {
     public function __construct(
         private Task $task,

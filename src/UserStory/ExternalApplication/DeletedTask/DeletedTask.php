@@ -6,7 +6,7 @@ namespace Rb\UserStory\ExternalApplication\DeletedTask;
 
 use Rb\Domain\Task\Save\Persistent;
 use Rb\Domain\Task\Save\SaveTask;
-use Rb\Domain\Task\Save\WithCash;
+use Rb\Domain\Task\Save\WithCache;
 use Rb\Generic\Response;
 use Rb\Generic\Response\BadRequest;
 use Rb\Generic\Response\Ok;
@@ -38,7 +38,7 @@ class DeletedTask implements UserStory
         $validationValue['is_deleted'] = 1;
 
         $createTaskResult =
-            (new WithCash(
+            (new WithCache(
                 new SaveTask(
                     new Persistent(
                         Task::findOne(['id' => $validationValue['id']]),
