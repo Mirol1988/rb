@@ -16,7 +16,7 @@ class PriorityController extends Controller
      *     path="/api/v1/priorities",
      *     operationId="viewPriorityList",
      *     summary="View priority list",
-     *     tags={"Status"},
+     *     tags={"Priority"},
      *      @OA\Parameter(
      *           name="app_token",
      *           in="query",
