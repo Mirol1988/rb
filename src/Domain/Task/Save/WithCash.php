@@ -6,6 +6,7 @@ namespace Rb\Domain\Task\Save;
 
 use Rb\Domain\Task\Task;
 use Rb\Generic\Result;
+use Rb\Generic\Result\Successful;
 use Rb\Models\Task as TaskModel;
 use Yii;
 
@@ -40,7 +41,7 @@ class WithCash implements Task
             ]
         );
 
-        return new Result\Successful([$data]);
+        return new Successful([$data]);
     }
 
 }
