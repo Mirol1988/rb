@@ -1,0 +1,19 @@
+<phpunit
+        bootstrap="bootstrap.php"
+        convertErrorsToExceptions="true"
+        convertNoticesToExceptions="true"
+        convertWarningsToExceptions="true"
+        colors="true"
+        stopOnFailure="false"
+>
+    <coverage cacheDirectory="/www/test"
+              includeUncoveredFiles="true"
+              processUncoveredFiles="true"
+              pathCoverage="false"
+              ignoreDeprecatedCodeUnits="true"
+              disableCodeCoverageIgnore="true">
+        <include>
+            <directory suffix=".php">./../src</directory>
+        </include>
+    </coverage>
+</phpunit>

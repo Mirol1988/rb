@@ -1,0 +1,48 @@
+{
+  "name": "site/rb",
+  "description": "Rb site",
+  "type": "project",
+  "minimum-stability": "stable",
+  "autoload": {
+    "psr-4": {
+      "Rb\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Rb\\Tests\\": "test/"
+    }
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    }
+  ],
+  "require": {
+    "php": "^8.0",
+    "ext-json": "*",
+    "ext-dom": "*",
+    "ext-pdo": "*",
+    "ext-mbstring": "*",
+    "yidas/yii2-composer-bower-skip": "^2.0",
+    "yiisoft/yii2": "^2.0",
+    "ramsey/uuid": "^3.9",
+    "zircote/swagger-php": "^3.0",
+    "yiisoft/yii2-redis": "~2.0.0",
+    "yii2tech/ar-softdelete": "^1.0",
+    "vlucas/phpdotenv": "^4.1",
+    "guzzlehttp/guzzle": "*",
+    "php-mqtt/client": "^1.2",
+    "ext-curl": "*",
+    "ext-ev": "*",
+    "yiisoft/yii2-queue": "2.3.4",
+    "bizley/jwt": "^3.4",
+    "aws/aws-sdk-php": "*",
+    "ext-gmp": "*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.3",
+    "wisembly/elephant.io": "~3.0"
+  }
+}

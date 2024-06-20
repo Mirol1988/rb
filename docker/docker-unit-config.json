@@ -1,0 +1,66 @@
+{
+    "listeners": {
+        "*:1900": {
+            "pass": "routes"
+        },
+        "*:1901": {
+            "pass": "applications/admin"
+        },
+        "*:1902": {
+            "pass": "applications/api"
+        },
+        "*:1903": {
+            "pass": "applications/frontend"
+        }
+    },
+    "routes": [
+        {
+            "action": {
+                "pass": "applications/common"
+            }
+        }
+    ],
+    "applications": {
+        "common": {
+            "type": "php",
+            "root": "/www/web/common",
+            "script": "index.php",
+            "processes": {
+                "max": 100,
+                "spare": 3,
+                "idle_timeout": 20
+            }
+        },
+        "admin": {
+            "type": "php",
+            "root": "/www/web/admin",
+            "script": "index.php",
+            "processes": {
+                "max": 100,
+                "spare": 3,
+                "idle_timeout": 20
+            }
+        },
+        "api": {
+            "type": "php",
+            "root": "/www/web/api",
+            "script": "index.php",
+            "processes": {
+                "max": 100,
+                "spare": 3,
+                "idle_timeout": 20
+            }
+        },
+        "frontend": {
+            "type": "php",
+            "root": "/www/web/frontend",
+            "script": "index.php",
+            "processes": {
+                "max": 100,
+                "spare": 3,
+                "idle_timeout": 20
+            }
+        }
+    },
+    "access_log": "/dev/stdout"
+}
